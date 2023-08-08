@@ -2,6 +2,25 @@
   background-color: rgba(14, 14, 15, 0.959);
 }
 
+img {
+  position: absolute;
+  justify-content: center;
+  top: 10rem;
+  bottom: 0rem;
+  left: auto;
+  right: auto;
+  
+}
+
+/* Make changes to bring the h2 to the top with the Weeded logo */
+h2 {
+  justify-content: center;
+  top: 0rem;
+  bottom: 0rem;
+  left: auto;
+  right: auto;
+}
+
 .common-text {
   color: white;
 }
@@ -16,8 +35,9 @@
   flex-direction: row;
 } */
 
-/* .buttons-side-by-side {
+.buttons-side-by-side {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-} */
+  align-items: end;
+}
