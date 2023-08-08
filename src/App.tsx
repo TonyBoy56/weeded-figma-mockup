@@ -1,10 +1,11 @@
 import React from "react";
-// import logo from './logo.svg';
+import logo from './weeded-logo.ad5a0e8af72134abb93657cdd20b83cc.svg'
 import "./App.css";
 
 const SignInForm = () => {
   return (
     <div className="landing-page flex justify-center items-center h-screen">
+      <img src={logo} alt="logo" />
       <div className="p-8 rounded w-2/3">
         <h2 className="common-text flex justify-center text-2xl font-bold mb-4">
           Create your Weeded account
@@ -26,7 +27,6 @@ const SignInForm = () => {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-
             <div className="side-by-side mb-5">
               <label
                 htmlFor="password"
@@ -58,21 +58,27 @@ const SignInForm = () => {
             </div>
           </div>
 
-          {/* change buttons to be separate divs for grid to function properly */}
-          <div className="buttons-side-by-side ">
-            <button
-              type="submit"
-              className=" bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-            >
-              Back
-            </button>
+          {/* checkbox here */}
 
-            <button
-              type="submit"
-              className=" bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-            >
-              Next
-            </button>
+
+          {/* change buttons to be separate divs for grid to function properly */}
+          <div className="buttons-side-by-side gap-6 ">
+            <div>
+              <button
+                type="submit"
+                className=" bg-transparent border border-white text-white py-1 px-10 rounded hover:border-black rounded"
+              >
+                Back
+              </button>
+            </div>
+            <div>
+              <button
+                type="submit"
+                className=" bg-green-800 border border-black text-white py-1 px-10 rounded hover:border-white rounded"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </form>
       </div>
