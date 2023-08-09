@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
+
 import logo from "./weeded-logo.ad5a0e8af72134abb93657cdd20b83cc.svg";
 
 export interface ICreateAccountProps {}
@@ -8,6 +10,12 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
+  const navigate = useNavigate();
+
+  const navigateToAboutMe = () => {
+    navigate('/about-me')
+  }
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -97,6 +105,7 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
               <button
                 type="submit"
                 className=" bg-green-700 border border-black text-white py-1 px-10 rounded hover:border-white rounded"
+                onClick={navigateToAboutMe}
               >
                 Next
               </button>

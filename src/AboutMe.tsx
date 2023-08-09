@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
+
 import logo from "./weeded-logo.ad5a0e8af72134abb93657cdd20b83cc.svg";
 
 export interface IAboutMeProps {}
@@ -10,6 +12,12 @@ const AboutMe: React.FunctionComponent<IAboutMeProps> = (props) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
+
+  const navigate = useNavigate();
+
+  const navigatetoCreateAccount = () => {
+    navigate('/')
+  }
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -146,6 +154,7 @@ const AboutMe: React.FunctionComponent<IAboutMeProps> = (props) => {
               <button
                 type="submit"
                 className=" bg-transparent border border-white text-white py-1 px-10 rounded hover:border-black rounded"
+                onClick={navigatetoCreateAccount}
               >
                 Back
               </button>
@@ -154,6 +163,7 @@ const AboutMe: React.FunctionComponent<IAboutMeProps> = (props) => {
               <button
                 type="submit"
                 className=" bg-green-800 border border-black text-white py-1 px-10 rounded hover:border-white rounded"
+                onClick={navigatetoCreateAccount}
               >
                 Next
               </button>
