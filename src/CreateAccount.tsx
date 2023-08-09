@@ -1,6 +1,5 @@
 import React from "react";
-import logo from './weeded-logo.ad5a0e8af72134abb93657cdd20b83cc.svg'
-
+import logo from "./weeded-logo.ad5a0e8af72134abb93657cdd20b83cc.svg";
 
 export interface ICreateAccountProps {}
 
@@ -61,6 +60,10 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
           </div>
 
           {/* checkbox here */}
+          <div className="flex items-center mb-4">
+            <input id="default-checkbox" type="checkbox" className="w-4 h-4 accent-green-500 rounded"/>
+            <label htmlFor="default-checkbox" className="ml-2 text-md font-medium text-green-700"> I am actively employed as an owner in the cannabis industry</label>
+          </div>
 
           {/* change buttons to be separate divs for grid to function properly */}
           <div className="buttons-side-by-side gap-6 ">
@@ -75,7 +78,7 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
             <div>
               <button
                 type="submit"
-                className=" bg-green-800 border border-black text-white py-1 px-10 rounded hover:border-white rounded"
+                className=" bg-green-700 border border-black text-white py-1 px-10 rounded hover:border-white rounded"
               >
                 Next
               </button>
