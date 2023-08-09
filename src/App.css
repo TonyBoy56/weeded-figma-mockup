@@ -30,11 +30,6 @@ h2 {
   flex-direction: row;
 }
 
-/* .side-by-side {
-  display: flex;
-  flex-direction: row;
-} */
-
 .buttons-side-by-side {
   display: flex;
   flex-direction: row;
@@ -42,6 +37,7 @@ h2 {
   align-items: end;
 }
 
+/* WIP dropdowns */
 /* .dropdown:hover .dropdown-menu {
   display: block;
 } */
