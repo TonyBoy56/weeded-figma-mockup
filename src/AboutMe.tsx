@@ -71,9 +71,9 @@ const AboutMe: React.FunctionComponent<IAboutMeProps> = (props) => {
               />
             </div>
           </div>
-
+{/*  */}
           {/* Pending drag/drop box implementation */}
-
+{/*  */}
           <div className="grid gap-6 md:grid-cols-2">
             {/* Change to dropdown */}
             <div className="side-by-side mb-5">
@@ -112,6 +112,7 @@ const AboutMe: React.FunctionComponent<IAboutMeProps> = (props) => {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
+
             {/* Change to dropdown */}
             <div className="side-by-side mb-5">
               <label
@@ -148,7 +149,6 @@ const AboutMe: React.FunctionComponent<IAboutMeProps> = (props) => {
               />
             </div>
           </div>
-
           <div className="buttons-side-by-side gap-6 ">
             <div>
               <button
@@ -165,7 +165,7 @@ const AboutMe: React.FunctionComponent<IAboutMeProps> = (props) => {
                 className=" bg-green-800 border border-black text-white py-1 px-10 rounded hover:border-white rounded"
                 onClick={navigatetoCreateAccount}
               >
-                Next
+                Create Account
               </button>
             </div>
           </div>

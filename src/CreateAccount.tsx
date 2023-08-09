@@ -48,7 +48,6 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
               placeholder="Enter your email"
             />
           </div>
-
           <div className="grid gap-6 md:grid-cols-2">
             <div className="side-by-side mb-5">
               <label
@@ -84,14 +83,10 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
               />
             </div>
           </div>
-
-          {/* checkbox here */}
           <div className="flex items-center mb-4">
             <input id="default-checkbox" type="checkbox" className="w-4 h-4 accent-green-500 rounded"/>
             <label htmlFor="default-checkbox" className="ml-2 text-md font-medium text-green-700"> I am actively employed as an owner in the cannabis industry</label>
           </div>
-
-          {/* change buttons to be separate divs for grid to function properly */}
           <div className="buttons-side-by-side gap-6 ">
             <div>
               <button
