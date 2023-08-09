@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./weeded-logo.ad5a0e8af72134abb93657cdd20b83cc.svg";
 
 export interface ICreateAccountProps {}
 
 const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    console.log('Email:', email);
+    console.log('Password:', password);
+    console.log('Confirm Password:', password);
+
+  }
   return (
     <div className="landing-page flex justify-center items-center h-screen">
       <img src={logo} alt="logo" />
@@ -11,7 +23,7 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
         <h2 className="common-text flex text-2xl font-bold mb-4">
           Create your Weeded account
         </h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-10">
             <label
               htmlFor="email"
@@ -23,6 +35,8 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
               type="email"
               id="email"
               className="mt-1 p-2 border rounded w-full"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
             />
           </div>
@@ -39,6 +53,8 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
                 type="password"
                 id="password"
                 className="mt-1 p-2 border rounded w-full"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter your password"
               />
             </div>
@@ -52,8 +68,10 @@ const CreateAccount: React.FunctionComponent<ICreateAccountProps> = (props) => {
               </label>
               <input
                 type="password"
-                id="password"
+                id="confirmPassword"
                 className="mt-1 p-2 border rounded w-full"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="Re-enter your password"
               />
             </div>
